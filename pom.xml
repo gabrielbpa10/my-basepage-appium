@@ -8,10 +8,9 @@
 	<groupId>br.com.appium.mybasepage</groupId>
 	<artifactId>basepage</artifactId>
 	<version>1.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
 	<name>basepage</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,8 +50,13 @@
 					<version>3.0.2</version>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
+					<configuration>
+						<source>8</source>
+						<target>8</target>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
@@ -82,4 +86,12 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub gabrielbpa10 Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/gabrielbpa10/my-basepage-appium</url>
+		</repository>
+	</distributionManagement>
 </project>

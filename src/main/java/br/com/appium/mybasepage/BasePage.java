@@ -22,7 +22,7 @@ import io.appium.java_client.touch.offset.PointOption;
 
 public class BasePage {
 
-	private AndroidDriver<MobileElement> driver;
+	protected AndroidDriver<MobileElement> driver;
 	
 	public BasePage(AndroidDriver<MobileElement> driver) {
 		this.driver = driver;
